@@ -50,7 +50,11 @@ streamlit run app.py
 
 ## Contribuição
 
-Este projeto foi desenvolvido como parte de um trabalho acadêmico. Portanto, não estamos aceitando contribuições externas neste momento.
+Este projeto foi desenvolvido como parte de um trabalho acadêmico, mas estamos abertos a contribuições da comunidade. Se você deseja contribuir, siga estas etapas:
+
+1. Crie um fork do repositório.
+2. Faça suas modificações e adições.
+3. Envie um pull request com uma descrição detalhada das alterações.
 
 ## Agradecimentos
 
