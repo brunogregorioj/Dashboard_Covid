@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import pandas as pd
 import streamlit as st
-import altair as alt  # https://altair-viz.github.io/
+import altair as alt
 
 
 @st.cache(allow_output_mutation=True)
@@ -14,10 +14,13 @@ def get_df(type, by="global"):
 def get_country_df(df, type):
     cols = ["Lat", "Long", "Province/State"]
     df = df.drop(columns=cols).rename(columns={"Country/Region": "country"})
+
+    if "date" not in df.columns:
+        raise KeyError("Column 'date' not found in DataFrame.")
+
     df["country"] = df["country"].replace({"US": "United States", "Korea, South": "South Korea"})
-    df = df.melt(id_vars="country", var_name="date", value_name=f"total_{type}".lower())
     df["date"] = pd.to_datetime(df["date"])
-    df = df.set_index("date").groupby("country").resample("D").sum().reset_index()
+    df = df.groupby(["country", "date"]).sum().reset_index()
     df[f"daily_{type}"] = df.groupby("country")[f"total_{type}"].diff().fillna(0).clip(lower=0)
     return df
 

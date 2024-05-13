@@ -41,7 +41,7 @@ pip install -r requirements.txt
 1. Execute o aplicativo Streamlit:
 
 ```bash
-streamlit run app.py
+streamlit Streamlit_Covid.py
 ```
 
 2. Acesse o dashboard em seu navegador em [http://localhost:8501](http://localhost:8501).
