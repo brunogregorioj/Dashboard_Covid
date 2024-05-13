@@ -4,6 +4,8 @@
 
 Este é um repositório que contém uma aplicação de dashboard criada com Python e Streamlit para acompanhar e visualizar os casos de COVID-19 em todo o mundo. A aplicação permite que os usuários analisem tendências de casos confirmados e mortes, bem como configure filtros para uma análise mais detalhada. Este projeto foi desenvolvido como parte de um trabalho acadêmico, com o objetivo de fornecer uma interface amigável e informativa para ajudar as pessoas a acompanhar a propagação da pandemia.
 
+**Nota:** A base de dados utilizada neste projeto pode sofrer alterações, portanto, a formatação dos dados pode precisar ser ajustada periodicamente para garantir sua correta visualização.
+
 ## Recursos
 
 - Visualização de casos de COVID-19 em todo o mundo.
